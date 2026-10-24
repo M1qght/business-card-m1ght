@@ -129,6 +129,26 @@ h1 {
     color: var(--muted);
 }
 
+.arcade {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    text-align: left;
+}
+
+.arcade h2 {
+    margin: 0;
+    color: var(--accent);
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.arcade p {
+    margin: 8px 0 16px;
+    color: var(--muted);
+    font-size: 18px;
+}
+
 .social-links {
     margin: 0;
     padding: 0;

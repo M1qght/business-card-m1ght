@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>За кристаллами · M1ght</title>
+    <link rel="icon" href="../../images/avatar.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <main class="quest">
+        <header class="quest-header">
+            <a class="about-button" href="../../index.html">← К визитке</a>
+            <span>01 / MINI QUEST</span>
+        </header>
+
+        <h1>Поход за кристаллами</h1>
+        <p class="description">Победи трёх слизней и собери пять кристаллов.</p>
+
+        <div class="quest-stats">
+            <span>Ход <strong id="turn">1</strong></span>
+            <span>Кристаллы <strong id="crystals">0 / 5</strong></span>
+            <span>Зелья <strong id="potions">2</strong></span>
+        </div>
+
+        <div class="arena">
+            <section class="fighter">
+                <h2>Искатель</h2>
+                <img class="sprite" src="../../images/avatar.svg" alt="Пиксельный робот — искатель кристаллов" width="128" height="128">
+                <p>Здоровье: <span id="hero-health">100 / 100</span></p>
+                <div class="health-track"><div class="health-fill" id="hero-bar"></div></div>
+            </section>
+
+            <span class="versus" aria-hidden="true">VS</span>
+
+            <section class="fighter">
+                <h2 id="enemy-name">Слизень 1 / 3</h2>
+                <img class="sprite" id="enemy-sprite" src="../../images/slime.svg" alt="Зелёный пиксельный слизень" width="128" height="128">
+                <p>Здоровье: <span id="enemy-health">40 / 40</span></p>
+                <div class="health-track"><div class="health-fill enemy-fill" id="enemy-bar"></div></div>
+            </section>
+        </div>
+
+        <p class="enemy-hint" id="enemy-hint">Следующая атака слизня: 16 урона.</p>
+        <p class="message" id="message" role="status">Ты у входа в пещеру. Первый слизень уже ждёт!</p>
+
+        <div class="actions">
+            <button class="about-button" id="attack-button" type="button">Удар <small>20 урона</small></button>
+            <button class="about-button" id="shield-button" type="button">Щит <small>8 урона · защита</small></button>
+            <button class="about-button" id="potion-button" type="button">Зелье <small>+30 здоровья</small></button>
+        </div>
+        <button class="about-button restart" id="restart-button" type="button">Начать заново</button>
+
+        <details class="rules">
+            <summary>Как играть?</summary>
+            <p>После твоего действия слизень атакует в ответ. Каждый третий его удар сильнее: 30 вместо 16. Следи за подсказкой над кнопками.</p>
+            <p>Щит тоже наносит урон, а ответный удар уменьшает до 3. Зелье восстанавливает 30 здоровья, но не защищает от атаки.</p>
+            <p>За победу над первым слизнем получишь один кристалл, за остальных — по два. Между боями восстанавливается 20 здоровья. Всего у тебя два зелья на весь поход.</p>
+        </details>
+    </main>
+</body>
+</html>

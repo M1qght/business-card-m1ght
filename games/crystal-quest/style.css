@@ -1,0 +1,167 @@
+.quest {
+    --health: #91c99b;
+    --enemy-health: #e6a58d;
+    --shadow: #100e1d;
+    width: 100%;
+    max-width: 840px;
+    padding: 28px;
+    background: var(--card);
+    border: 2px solid var(--border);
+    box-shadow: 6px 6px var(--shadow);
+}
+
+.quest-header, .quest-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    color: var(--muted);
+    font-size: 18px;
+}
+
+.quest-header {
+    margin-bottom: 28px;
+}
+
+.quest-header a {
+    text-decoration: none;
+}
+
+.quest-stats {
+    padding: 12px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+}
+
+.quest-stats strong {
+    color: var(--accent);
+    font-weight: 400;
+}
+
+.arena {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 0;
+    text-align: center;
+}
+
+.fighter {
+    min-width: 0;
+}
+
+.fighter h2 {
+    margin: 0 0 12px;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.sprite {
+    width: 128px;
+    max-width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.fighter p {
+    margin: 12px 0 8px;
+    font-size: 18px;
+}
+
+.health-track {
+    height: 14px;
+    padding: 2px;
+    background: var(--background);
+    border: 1px solid var(--border);
+}
+
+.health-fill {
+    width: 100%;
+    height: 100%;
+    background: var(--health);
+}
+
+.enemy-fill {
+    background: var(--enemy-health);
+}
+
+.versus, .enemy-hint {
+    color: var(--accent);
+}
+
+.enemy-hint {
+    margin: 0 0 12px;
+    font-size: 18px;
+}
+
+.message {
+    min-height: 90px;
+    margin: 0 0 20px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    background: var(--background);
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.actions small {
+    display: block;
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.actions button:disabled {
+    opacity: .45;
+    cursor: default;
+    transform: none;
+    box-shadow: none;
+    background: var(--button);
+}
+
+.restart {
+    margin-top: 20px;
+}
+
+.rules {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 18px;
+}
+
+.rules summary {
+    cursor: pointer;
+    color: var(--text);
+}
+
+.rules summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+@media (max-width: 480px) {
+    body { padding: 16px; }
+    .quest { padding: 20px 16px; }
+    .quest-header { font-size: 14px; }
+    .arena { gap: 8px; }
+    .fighter {
+        display: grid;
+        grid-template-rows: 60px 96px 60px 14px;
+    }
+    .fighter h2 { margin: 0; font-size: 22px; }
+    .fighter p { margin: 8px 0; font-size: 16px; }
+    .sprite {
+        justify-self: center;
+        width: 96px;
+        height: 96px;
+        object-fit: contain;
+    }
+    .actions { grid-template-columns: 1fr; gap: 10px; }
+}
