@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Визитка M1ght</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <main class="card">
+        <div class="card-header">
+            <span>M1GHT.EXE</span>
+            <button class="theme-button" id="theme-button" type="button">Палитра: ночь</button>
+        </div>
+
         <h1>Привет, я M1ght</h1>
         <p class="description">
             Изучаю Frontend <br>
@@ -16,11 +22,31 @@
 
         <nav aria-label="Мои ссылки">
             <ul class="social-links">
-                <li><a class="social-button" href="https://t.me/m1qght">Telegram</a></li>
-                <li><a class="social-button" href="https://github.com/M1qght">GitHub</a></li>
-                <li><button class="social-button" type="button" disabled>YouTube — скоро</button></li>
+                <li>
+                    <a class="social-button" href="https://t.me/m1qght">
+                        <img src="images/telegram.svg" alt="" width="24" height="24">
+                        <span>Telegram</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="social-button" href="https://github.com/M1qght">
+                        <img src="images/github.svg" alt="" width="24" height="24">
+                        <span>GitHub</span>
+                    </a>
+                </li>
+                <li>
+                    <button class="social-button" type="button" disabled>
+                        <img src="images/youtube.svg" alt="" width="24" height="24">
+                        <span>YouTube — скоро</span>
+                    </button>
+                </li>
             </ul>
         </nav>
     </main>
+
+    <footer class="footer">
+        <span>© M1ght · сделано по пикселям</span>
+        <a href="https://github.com/M1qght/business-card-m1ght">Код ↗</a>
+    </footer>
 </body>
 </html>
