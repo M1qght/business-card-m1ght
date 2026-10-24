@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Визитка M1ght</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/avatar.svg" type="image/svg+xml">
     <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -14,11 +15,23 @@
             <button class="theme-button" id="theme-button" type="button">Палитра: ночь</button>
         </div>
 
+        <div class="avatar">
+            <img src="images/avatar.svg" alt="Пиксельный робот — аватар M1ght" width="80" height="80">
+        </div>
+
         <h1>Привет, я M1ght</h1>
         <p class="description">
             Изучаю Frontend <br>
             и создаю интересные проекты
         </p>
+
+        <div class="about">
+            <button class="about-button" id="about-button" type="button" aria-controls="about-text">Что я изучаю?</button>
+            <p class="about-text hidden" id="about-text">
+                Разбираюсь в HTML, CSS и JavaScript.
+                Учусь работать с DOM и делать страницы интерактивными.
+            </p>
+        </div>
 
         <nav aria-label="Мои ссылки">
             <ul class="social-links">

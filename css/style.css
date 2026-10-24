@@ -63,13 +63,47 @@ body {
     font-size: 16px;
 }
 
-.theme-button {
+.theme-button, .about-button {
     padding: 6px 10px;
     border: 1px solid var(--border);
     background: var(--button);
     color: var(--text);
     font: inherit;
     cursor: pointer;
+}
+
+.avatar {
+    width: 84px;
+    height: 84px;
+    margin: 0 auto 24px;
+    border: 2px solid var(--border);
+    box-shadow: 4px 4px 0 #100e1d;
+}
+
+.avatar img {
+    display: block;
+    image-rendering: pixelated;
+}
+
+.about {
+    margin-bottom: 24px;
+}
+
+.about-button {
+    font-size: 18px;
+}
+
+.about-text {
+    margin: 16px 0 0;
+    padding: 12px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 18px;
+    text-align: left;
+}
+
+.hidden {
+    display: none;
 }
 
 .card {
@@ -124,17 +158,17 @@ h1 {
     image-rendering: pixelated;
 }
 
-.social-button, .theme-button {
+.social-button, .theme-button, .about-button {
     transition: background-color .2s, transform .2s, box-shadow .2s;
 }
 
-a.social-button:hover, .theme-button:hover {
+a.social-button:hover, .theme-button:hover, .about-button:hover {
     background: var(--button-hover);
     transform: translateY(-2px);
     box-shadow: 3px 5px 0 #100e1d;
 }
 
-.social-button:focus-visible, .theme-button:focus-visible, .footer a:focus-visible {
+.social-button:focus-visible, .theme-button:focus-visible, .about-button:focus-visible, .footer a:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 4px;
 }
@@ -178,7 +212,7 @@ a.social-button:hover, .theme-button:hover {
         animation: none;
     }
 
-    .social-button, .theme-button {
+    .social-button, .theme-button, .about-button {
         transition: none;
     }
 }
